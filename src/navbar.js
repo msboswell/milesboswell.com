@@ -1,17 +1,15 @@
 import React from 'react';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Link from '@material-ui/core/Link';
-import Typography from '@material-ui/core/Typography'
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar'
+import { List, ListItem, ListItemText, Link, Typography, AppBar, Toolbar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
 	header: {
 		fontStyle: 'oblique',
 		flex: 'none' // change to 1 to push everything else to right
+	},
+	transparent: {
+		background: 'transparent',
+		color: 'black',
 	}
 });
 
@@ -23,11 +21,14 @@ const Item = ({ path, children }) => (
 	</ListItemText>
 );
 
-export default () => {
+export default ({ transparent }) => {
 	const classes = useStyles();
 
 	return (
-	<AppBar color="primary" position="static">
+	<AppBar
+	color={transparent ? "transparent" : "primary"}
+	position="static"
+	>
 		<Toolbar>
 			<Link href="/" color="inherit" underline="none" className={classes.header}>
 				<Typography variant="h5">
