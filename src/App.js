@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 export default () => {
   const classes = useStyles();
 
-	return (
+  return (
     <ThemeProvider theme={general}>
       <div className={classes.pageContainer}>
         <Navbar />
@@ -41,5 +41,5 @@ export default () => {
         <Footer />
       </div>
     </ThemeProvider>
-	);
+  );
 };
