@@ -6,9 +6,9 @@ import { Grid } from '@material-ui/core';
 const useStyles = makeStyles({
   footer: {
     position: 'absolute',
-    bottom: '-10rem',
+    bottom: '-8rem',
     minWidth: '100%',
-    height: '10rem',
+    height: '8rem',
     padding: '4rem 12rem',
     backgroundColor: '#252525',
     color: 'white',
@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 const Section = ({ title, children }) => {
   const classes = useStyles();
   return (
-    <Grid item xs={12} sm={6} md={4} className={classes.section}>
+    <Grid container item xs={12} sm={6} md={4} className={classes.section}>
       <Typography variant="h6">{title}</Typography>
       {children}
     </Grid>
@@ -31,9 +31,9 @@ export default () => {
   return (
     <Container className={classes.footer}>
       <Grid container spacing={3}>
-        <Section title="Coming Soon"></Section>
+        <Section title="Coming Soon:"></Section>
+        <Section title="Website Creation"></Section>
         <Section title="Services"></Section>
-        <Section title="Footer Header"></Section>
       </Grid>
     </Container>
   );
