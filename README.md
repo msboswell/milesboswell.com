@@ -23,10 +23,15 @@ At some point, maybe the whole site could be migrated to Gatsby. Currently, this
 sounds like a good idea because the whole site seems pretty static anyways.
 Gatsby could also improve image loading, like the huge background image on the
 home page.
-- could be made directly in React
-- could try to make it in Gatsby (make sure routing still works)
-- running WordPress in a Docker container is cool and easy
-- there are other ways of making an easily managable blog
+  - could be made directly in React
+  - could try to make it in Gatsby (make sure routing still works)
+  - running WordPress in a Docker container is cool and easy
+  - there are other ways of making an easily managable blog
+
+At some point, maybe the whole site could be migrated to Gatsby. Currently, this
+sounds like a good idea because the whole site seems pretty static anyways.
+Gatsby could also improve image loading, like the huge background image on the
+home page.
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
