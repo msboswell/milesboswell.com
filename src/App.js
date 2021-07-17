@@ -32,7 +32,7 @@ export default () => {
         <Container maxWidth="xl" className={classes.container}>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/blog/" component={Posts} />
+            <Route path="/about/" component={Posts} />
             <Route path="/contact/" component={Contact} />
             <Route path="/login/" component={Login} />
             <Route component={PageNotFound} />

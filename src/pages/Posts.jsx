@@ -38,15 +38,24 @@ const PostCard = ({ post }) => (
 );
 
 export default () => {
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.download = `resume_miles_boswell.pdf`;
+    link.href = `${process.env.PUBLIC_URL}/resume_miles_boswell.pdf`;
+    link.click();
+  };
+
   return (
     <div>
       <Info title="Project Blog">
         In the future, I want this page to be a blog of some of the projects I
         am working on.
         <br />
-        <br />
         Currently, I am displaying some simple cards representing project posts.
       </Info>
+      <Button onClick={downloadResume} color="secondary" variant="contained">
+        Download My Resume
+      </Button>
       <Grid container spacing={3} justify="space-around" alignItems="baseline">
         {posts.map(post => (
           <Grid item xs={12} sm={6} md={4} key={post.title}>

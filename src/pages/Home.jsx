@@ -42,9 +42,17 @@ export default () => {
           Miles Boswell
         </Typography>
         <Typography className={classes.subtitle} variant="h6">
-          Developer | Programmer | Problem Solver
+          I'm {' '}
+              "a Developer",
+              "a Musician",
+              "a Problem Solver",
+              2000,
+              "",
+              100,
+              "an Amazonian",
+              2000,
         </Typography>
-        <Button variant="contained" color="secondary" size="large">
+        <Button variant="contained" color="secondary" size="large" href="/about">
           Check me out{'\t'}
           <ArrowForwardRoundedIcon></ArrowForwardRoundedIcon>
         </Button>

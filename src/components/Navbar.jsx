@@ -14,7 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   header: {
     fontStyle: 'oblique',
-    flex: 'none', // change to 1 to push everything else to right
+    flex: 'none',
   },
   login: {
     position: 'absolute',
@@ -48,7 +48,7 @@ export default () => {
         </Link>
         <List component="nav">
           <ListItem component="div">
-            <Item path="/blog/">Blog</Item>
+            <Item path="/about/">About Me</Item>
             <Item path="/contact/">Contact</Item>
           </ListItem>
         </List>
