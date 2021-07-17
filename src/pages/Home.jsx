@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ArrowForwardRoundedIcon from '@material-ui/icons/ArrowForwardRounded';
+import Typical from 'react-typical';
 import Background from '../assets/home-bg.jpg';
 
 const useStyles = makeStyles({
@@ -41,16 +42,25 @@ export default () => {
         <Typography className={classes.title} variant="h4">
           Miles Boswell
         </Typography>
+
         <Typography className={classes.subtitle} variant="h6">
-          I'm {' '}
-              "a Developer",
-              "a Musician",
-              "a Problem Solver",
+          I'm a {' '}
+          <Typical
+            loop={Infinity}
+            wrapper="span"
+            steps={[
+              "Developer",
               2000,
               "",
               100,
-              "an Amazonian",
+              "Musician",
               2000,
+              "",
+              100,
+              "Problem Solver",
+              2000
+            ]}
+          />
         </Typography>
         <Button variant="contained" color="secondary" size="large" href="/about">
           Check me out{'\t'}
