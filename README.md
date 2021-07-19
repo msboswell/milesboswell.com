@@ -1,9 +1,11 @@
 # Personal Website
-Source code repo for my personal website, hosted at
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0e793f57-d92e-4487-82cd-79e4702c97e9/deploy-status)](https://app.netlify.com/sites/ecstatic-jepsen-d2f251/deploys)
+
+Source repo for my personal website, hosted at
 [milesboswell.com](https://milesboswell.com).
 
 ## TODO
-[milesboswell.com](https://milesboswell.com).
 
 - [x] Recreate homepage with background image
 - [ ] Add favicon
