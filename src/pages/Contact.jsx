@@ -5,10 +5,26 @@ import {
   Input,
   Button,
   Typography,
+  makeStyles,
 } from '@material-ui/core';
 import Info from '../components/Info';
 
+const useStyles = makeStyles({
+  contentArea: {
+    display: 'flex',
+    jusitfyContent: 'center',
+  },
+  contentForm: {
+    width: '50%'
+  },
+  sendButton: {
+    width: '20%'
+  },
+});
+
 export default () => {
+  const classes = useStyles();
+
   return (
     <div>
       <Info title={'Example Form'}>
@@ -16,13 +32,8 @@ export default () => {
         some point in the future. The form below has no functionality and is
         only used for UI reference.
       </Info>
-      <div
-        style={{
-          display: 'flex',
-          jusitfyContent: 'center',
-        }}
-      >
-        <form style={{ width: '50%' }}>
+      <div className={classes.contentArea}>
+        <form className={classes.contentForm}>
           <Typography variant="h4" color="inherit">
             Contact Form
           </Typography>
@@ -43,7 +54,7 @@ export default () => {
           </FormControl>
 
           <Button
-            style={{ width: '20%' }}
+            className={classes.sendButton}
             variant="contained"
             color="primary"
             size="medium"

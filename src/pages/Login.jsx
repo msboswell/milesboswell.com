@@ -6,9 +6,20 @@ import {
   Button,
   Typography,
   Container,
+  makeStyles,
 } from '@material-ui/core';
 
+const useStyles = makeStyles({
+  form: {
+    width: "50%",
+  },
+  submitButton: {
+    width: "40%",
+  },
+});
+
 export default () => {
+  const classes = useStyles();
   const [state] = useState({});
 
   const handleSubmit = e => {
@@ -19,7 +30,7 @@ export default () => {
   return (
     <div align="center">
       <Container>
-        <form style={{ width: '50%' }} onSubmit={handleSubmit}>
+        <form className={classes.form} onSubmit={handleSubmit}>
           <Typography variant="h4" color="inherit">
             Login
           </Typography>
@@ -35,7 +46,7 @@ export default () => {
           </FormControl>
 
           <Button
-            style={{ width: '40%' }}
+            className={classes.submitButton}
             variant="contained"
             color="primary"
             size="medium"
