@@ -7,8 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Info from '../components/Info';
-
-import posts from './dummy-post.js';
+import dummyPosts from './dummy-post.js';
 
 const PostCard = ({ post }) => (
   <Card>
@@ -38,13 +37,6 @@ const PostCard = ({ post }) => (
 );
 
 export default () => {
-  const downloadResume = () => {
-    const link = document.createElement("a");
-    link.download = `resume_miles_boswell.pdf`;
-    link.href = `${process.env.PUBLIC_URL}/resume_miles_boswell.pdf`;
-    link.click();
-  };
-
   return (
     <div>
       <Info title="Project Blog">
@@ -53,11 +45,8 @@ export default () => {
         <br />
         Currently, I am displaying some simple cards representing project posts.
       </Info>
-      <Button onClick={downloadResume} color="secondary" variant="contained">
-        Download My Resume
-      </Button>
       <Grid container spacing={3} justify="space-around" alignItems="baseline">
-        {posts.map(post => (
+        {dummyPosts.map(post => (
           <Grid item xs={12} sm={6} md={4} key={post.title}>
             <PostCard post={post} />
           </Grid>

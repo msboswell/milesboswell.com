@@ -10,6 +10,7 @@ import PageNotFound from './pages/PageNotFound';
 import Home from './pages/Home';
 import Posts from './pages/Posts';
 import general from './theme.js';
+import About from './pages/About';
 
 const useStyles = makeStyles({
   pageContainer: {
@@ -32,7 +33,8 @@ export default () => {
         <Container maxWidth="xl" className={classes.container}>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/about/" component={Posts} />
+            <Route path="/about/" component={About} />
+            <Route path="/posts/" component={Posts} />
             <Route path="/contact/" component={Contact} />
             <Route path="/login/" component={Login} />
             <Route component={PageNotFound} />
