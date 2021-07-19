@@ -19,6 +19,7 @@ const useStyles = makeStyles({
   login: {
     position: 'absolute',
     right: '2rem',
+  },
 });
 
 const Item = ({ path, children }) => (
