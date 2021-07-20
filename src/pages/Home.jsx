@@ -62,7 +62,7 @@ export default () => {
             ]}
           />
         </Typography>
-        <Button variant="contained" color="secondary" size="large" href="/about">
+        <Button variant="contained" color="secondary" size="large" href="/about/">
           Check me out{'\t'}
           <ArrowForwardRoundedIcon></ArrowForwardRoundedIcon>
         </Button>
