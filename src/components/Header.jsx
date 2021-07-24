@@ -7,11 +7,14 @@ import {
   Typography,
   AppBar,
   Toolbar,
-  Button,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { GitHub, LinkedIn } from '@material-ui/icons';
 
 const useStyles = makeStyles({
+  appBar: {
+    paddingTop: '0.75rem'
+  },
   header: {
     fontStyle: 'oblique',
     flex: 'none',
@@ -25,7 +28,7 @@ const useStyles = makeStyles({
 const Item = ({ path, children }) => (
   <ListItemText inset>
     <Typography color="inherit" variant="h6">
-      <Link color="inherit" href={path}>
+      <Link color="inherit" href={path} target="_blank">
         {children}
       </Link>
     </Typography>
@@ -36,7 +39,7 @@ export default () => {
   const classes = useStyles();
 
   return (
-    <AppBar color="primary" position="static">
+    <AppBar color="primary" position="static" className={classes.appBar} >
       <Toolbar>
         <Link
           href="/"
@@ -46,16 +49,17 @@ export default () => {
         >
           <Typography variant="h5">Miles Boswell</Typography>
         </Link>
-        <List component="nav">
-          <ListItem component="div">
-            <Item path="/about/">About Me</Item>
-            <Item path="/contact/">Contact</Item>
-          </ListItem>
-        </List>
         <Typography color="inherit" variant="h6" className={classes.login}>
-          <Button color="secondary" variant="contained" href="/login/">
-            Login
-          </Button>
+          <List component="nav">
+            <ListItem component="div">
+              <Item path="https://github.com/msboswell">
+                <GitHub fontSize="large" />
+              </Item>
+              <Item path="https://www.linkedin.com/in/miles-sebasti%C3%A1n-boswell/">
+                <LinkedIn fontSize="large" />
+              </Item>
+            </ListItem>
+          </List>
         </Typography>
       </Toolbar>
     </AppBar>
