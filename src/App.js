@@ -3,7 +3,7 @@ import { Container } from '@material-ui/core';
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import { Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import PageNotFound from './pages/PageNotFound';
@@ -29,7 +29,7 @@ export default () => {
   return (
     <ThemeProvider theme={general}>
       <div className={classes.pageContainer}>
-        <Navbar />
+        <Header />
         <Container maxWidth="xl" className={classes.container}>
           <Switch>
             <Route exact path="/" component={Home} />
