@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import ArrowForwardRoundedIcon from '@material-ui/icons/ArrowForwardRounded';
 import Typical from 'react-typical';
 import Background from '../assets/home-bg.jpg';
+import { ArrowDownwardRounded } from '@material-ui/icons';
 
 const useStyles = makeStyles({
   bg: {
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     fontSize: '6rem',
   },
   subtitle: {
-    fontSize: '1.7rem',
+    fontSize: '1.8rem',
     margin: '1rem',
   },
 });
@@ -42,8 +42,7 @@ export default () => {
         <Typography className={classes.title} variant="h4">
           Miles Boswell
         </Typography>
-
-        <Typography className={classes.subtitle} variant="h6">
+        <Typography className={classes.subtitle} variant="h5">
           I'm a {' '}
           <Typical
             loop={Infinity}
@@ -62,9 +61,9 @@ export default () => {
             ]}
           />
         </Typography>
-        <Button variant="contained" color="secondary" size="large" href="/about/">
+        <Button variant="contained" color="secondary" size="large" href="//">
           Check me out{'\t'}
-          <ArrowForwardRoundedIcon></ArrowForwardRoundedIcon>
+          <ArrowDownwardRounded />
         </Button>
       </Container>
     </div>

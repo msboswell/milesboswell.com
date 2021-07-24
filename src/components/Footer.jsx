@@ -1,27 +1,42 @@
 import React from 'react';
-import { Container, Typography } from '@material-ui/core';
+import { Container, Link, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
+import { GitHub, LinkedIn, Mail } from '@material-ui/icons';
 
 const useStyles = makeStyles({
-  footer: {
+  container: {
     position: 'absolute',
-    bottom: '-8rem',
+    bottom: '-15rem',
     minWidth: '100%',
-    height: '8rem',
+    height: '15rem',
     padding: '4rem 12rem',
     backgroundColor: '#252525',
     color: 'white',
   },
-  section: {},
+  grid: {
+    justifyContent: 'center',
+    border: '2px dashed red',
+  },
+  socialIcons: {
+    justifyContent: 'center',
+    paddingLeft: "1rem",
+    width: '30%'
+  },
+  madeByMeText: {
+    paddingTop: "1rem"
+  },
+  coolThingsText: {
+    paddingBottom: "1.5rem"
+  }
 });
 
-const Section = ({ title, children }) => {
-  const classes = useStyles();
+const SocialGridItem = ({ title, href, children }) => {
   return (
-    <Grid container item xs={12} sm={6} md={4} className={classes.section}>
-      <Typography variant="h6">{title}</Typography>
-      {children}
+    <Grid container item xs={12} sm={8} md={3}>
+      <Link color="inherit" href={href} target="_blank">
+        {children}
+      </Link>
     </Grid>
   );
 };
@@ -29,12 +44,24 @@ const Section = ({ title, children }) => {
 export default () => {
   const classes = useStyles();
   return (
-    <Container className={classes.footer}>
-      <Grid container spacing={3}>
-        <Section title="Coming Soon:"></Section>
-        <Section title="Website Creation"></Section>
-        <Section title="Services"></Section>
+    <Container className={classes.container} align="center">
+      <Typography variant="h5" className={classes.coolThingsText}>I make cool things.</Typography>
+
+      <Grid container className={classes.socialIcons}>
+        <SocialGridItem href="https://github.com/msboswell">
+          <GitHub fontSize="large" />
+        </SocialGridItem>
+        <SocialGridItem href="https://www.linkedin.com/in/miles-sebasti%C3%A1n-boswell/">
+          <LinkedIn fontSize="large" />
+        </SocialGridItem>
+        <SocialGridItem href="mailto: milesboz@me.com">
+          <Mail fontSize="large" />
+        </SocialGridItem>
       </Grid>
+
+      <Typography className={classes.madeByMeText}>Handcrafted by me, built with {' '}
+        <Link color="secondary" href="https://reactjs.org/" target="_blank">React</Link>
+      </Typography>
     </Container>
   );
 };
